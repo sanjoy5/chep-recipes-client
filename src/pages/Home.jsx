@@ -3,6 +3,7 @@ import Banner from '../components/Banner'
 import Services from '../components/Services'
 import Chefs from '../components/Chefs'
 import { useLoaderData } from 'react-router-dom'
+import Contact from '../components/Contact'
 
 const Home = () => {
 
@@ -13,6 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <Chefs chefs={chefs} />
+
+            <Contact></Contact>
         </>
     )
 }

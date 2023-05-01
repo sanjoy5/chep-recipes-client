@@ -28,18 +28,18 @@ const Chefs = ({ chefs }) => {
                                 //     </div>
                                 // </div>
 
-                                <div class="p-4 lg:w-1/2">
-                                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-top sm:mb-0 mb-4" src={chef.chef_picture} />
-                                        <div class="flex-grow sm:pl-8">
-                                            <h2 class="title-font font-medium text-lg text-gray-900">{chef.chef_name}</h2>
-                                            <h3 class="text-gray-500 mb-2">Experience: {chef.years_of_experience} year</h3>
-                                            <p class="mb-2">{chef.bio}</p>
+                                <div key={chef.id} className="p-4 lg:w-1/2">
+                                    <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                                        <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-top sm:mb-0 mb-4" src={chef.chef_picture} />
+                                        <div className="flex-grow sm:pl-8">
+                                            <h2 className="title-font font-medium text-lg text-gray-900">{chef.chef_name}</h2>
+                                            <h3 className="text-gray-500 mb-2">Experience: {chef.years_of_experience} year</h3>
+                                            <p className="mb-2">{chef.bio}</p>
                                             <div className='flex items-center justify-center sm:justify-start gap-4 mb-4'>
                                                 <p className="">Recipes: {chef.numbers_of_recipes} </p>
                                                 <p className="flex items-center gap-1"><BiLike className='text-xl text-red-500' /> <span className="">{chef.likes}</span></p>
                                             </div>
-                                            <span class="inline-flex">
+                                            <span className="inline-flex">
                                                 <button className="py-2 px-5 rounded bgc-primary">Details</button>
                                             </span>
                                         </div>
