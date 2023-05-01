@@ -12,7 +12,7 @@ const Header = () => {
                     </Link>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                         <Link to='' className="mr-5 hover:text-gray-900">Home</Link>
-                        <Link to='' className="mr-5 hover:text-gray-900">About</Link>
+                        <Link to='' className="mr-5 hover:text-gray-900">Services</Link>
                         <Link to='' className="mr-5 hover:text-gray-900">Chefs</Link>
                         <Link to='' className="mr-5 hover:text-gray-900">Blogs</Link>
                     </nav>
