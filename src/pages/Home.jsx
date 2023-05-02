@@ -14,7 +14,7 @@ const Home = () => {
             <Services></Services>
             <Chefs chefs={chefs} />
 
-            <div className="offer p-10 rounded mb-24 w-full md:w-10/12 mx-auto">
+            <div className="offer p-10 rounded mb-10 w-full md:w-10/12 mx-auto">
 
                 <div className="flex items-center justify-center flex-wrap gap-6">
                     <h2 className="text-3xl font-bold text-white">Are You a <span className="text-dark">Chef ? </span></h2>

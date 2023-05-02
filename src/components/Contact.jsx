@@ -41,13 +41,13 @@ const Contact = () => {
 
 
             <section className="text-gray-600 body-font relative">
-                <div className="text-center mb-16">
+                <div className="text-center mt-24 mb-16">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Get In Touch</h1>
                     <div className="flex mt-6 justify-center">
                         <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>
                     </div>
                 </div>
-                <div className="w-full md:w-10/12 px-5 pb-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                <div className="w-full md:w-10/12 px-5 pb-10 mx-auto flex sm:flex-nowrap flex-wrap">
 
                     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
 

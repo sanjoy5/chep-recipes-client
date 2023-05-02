@@ -6,7 +6,7 @@ const Footer = () => {
         // <footer>
         //     <div className="bg-gray-100">
         //         <div className="w-full md:w-10/12 px-5 py-6 mx-auto flex items-center sm:flex-row flex-col justify-between">
-        //             <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        //             <Link to='/' className="flex title-font font-medium items-center tefullxt-gray-900 mb-4 md:mb-0">
         //                 <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" width={180} alt="" />
         //             </Link>
         //             <p className="text-lg text-gray-500 mt-4 sm:mt-0">&copy; 2023 Chef Recipe | Sanjoy</p>
@@ -15,7 +15,7 @@ const Footer = () => {
         //     </div>
         // </footer>
 
-        <footer class="bg-gray-900 text-white mt-8 md:mt-16">
+        <footer class="bg-gray-900 text-white mt-8 md:mt-24">
 
             <div class="w-100 md:w-10/12 pt-20 pb-14 px-3 mx-auto">
 
@@ -32,20 +32,20 @@ const Footer = () => {
                     <div class="mb-5 lg:mb-0">
                         <h3 class="text-xl font-medium pb-6">Quick Links</h3>
                         <ul>
-                            <li class="mb-4"><a href="/" class="">Home</a></li>
-                            <li class="mb-4"><a href="/services" class="">Services</a></li>
-                            <li class="mb-4"><a href="/chefs" class="">Chefs</a></li>
-                            <li class="mb-4"><a href="/blogs" class="">Blogs</a></li>
+                            <li class="mb-4"><Link to="/" class="">Home</Link></li>
+                            <li class="mb-4"><Link to="/services" class="">Services</Link></li>
+                            <li class="mb-4"><Link to="/chefs" class="">Chefs</Link></li>
+                            <li class="mb-4"><Link to="/blogs" class="">Blogs</Link></li>
                         </ul>
 
                     </div>
                     <div class="">
                         <h3 class="text-xl font-medium pb-6">Our Services</h3>
                         <ul>
-                            <li class="mb-4"><a href="" class="">Real Test</a></li>
-                            <li class="mb-4"><a href="" class="">Best Food</a></li>
-                            <li class="mb-4"><a href="" class="">Best Chefs</a></li>
-                            <li class="mb-4"><a href="" class="">Quick Delivery</a></li>
+                            <li class="mb-4"><Link to="" class="">Real Test</Link></li>
+                            <li class="mb-4"><Link to="" class="">Best Food</Link></li>
+                            <li class="mb-4"><Link to="" class="">Best Chefs</Link></li>
+                            <li class="mb-4"><Link to="" class="">Quick Delivery</Link></li>
 
                         </ul>
 
@@ -53,8 +53,8 @@ const Footer = () => {
                     <div class="">
                         <h3 class="text-xl font-medium pb-6">Help</h3>
                         <ul>
-                            <li class="mb-4"><a href="" class="">FAQs</a></li>
-                            <li class="mb-4"><a href="" class="">Contact Us</a></li>
+                            <li class="mb-4"><Link to="" class="">FAQs</Link></li>
+                            <li class="mb-4"><Link to="" class="">Contact Us</Link></li>
                         </ul>
 
                     </div>

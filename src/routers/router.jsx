@@ -8,6 +8,8 @@ import ViewRecipes from '../pages/ViewRecipes';
 import Services from '../components/Services';
 import Chefs from '../components/Chefs';
 import ChefsforRoute from '../pages/ChefsforRoute';
+import ErrorPage from '../pages/ErrorPage';
+import Contact from '../components/Contact';
 
 const router = createBrowserRouter([
     {
@@ -33,6 +35,15 @@ const router = createBrowserRouter([
                 path: "/chefs",
                 element: <ChefsforRoute></ChefsforRoute>,
                 loader: () => fetch('http://127.0.0.1:5000/chefs')
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>,
+
+            },
+            {
+                path: "*",
+                element: <ErrorPage></ErrorPage>
             },
         ],
     },
