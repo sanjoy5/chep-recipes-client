@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ActiveLinks from './ActiveLinks'
 
 const Header = () => {
     return (
@@ -11,10 +12,10 @@ const Header = () => {
                         <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" width={180} alt="" />
                     </Link>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <Link to='' className="mr-5 hover:text-gray-900">Home</Link>
-                        <Link to='' className="mr-5 hover:text-gray-900">Services</Link>
-                        <Link to='' className="mr-5 hover:text-gray-900">Chefs</Link>
-                        <Link to='' className="mr-5 hover:text-gray-900">Blogs</Link>
+                        <ActiveLinks to='/' >Home</ActiveLinks>
+                        <ActiveLinks to='/services' >Services</ActiveLinks>
+                        <ActiveLinks to='/chefs' >Chefs</ActiveLinks>
+                        <ActiveLinks to='/blogs' >Blogs</ActiveLinks>
                     </nav>
                     <button className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
                     </button>

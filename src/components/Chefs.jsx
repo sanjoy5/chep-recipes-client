@@ -3,6 +3,7 @@ import { BiLike } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 const Chefs = ({ chefs }) => {
+
     return (
         <>
             <section className="text-gray-600 body-font">
@@ -39,6 +40,8 @@ const Chefs = ({ chefs }) => {
 
                             ))
                         }
+
+
 
                     </div>
                 </div>
