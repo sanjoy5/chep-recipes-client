@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiLike } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 const Chefs = ({ chefs }) => {
     return (
@@ -15,18 +16,7 @@ const Chefs = ({ chefs }) => {
                     <div className="flex flex-wrap -m-4">
                         {
                             chefs?.map(chef => (
-                                // <div key={chef.id} className="p-4 lg:w-1/2">
-                                //     <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                                //         <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-top sm:mb-0 mb-4" src={chef.chef_picture} />
-                                //         <div className="flex-grow sm:pl-8">
-                                //             <h2 className="title-font font-medium text-lg text-gray-900">{chef.chef_name}</h2>
-                                //             <h3 className="text-gray-500 mb-1">Experience: {chef.years_of_experience} year</h3>
-                                //             <p className="">Recipes: {chef.numbers_of_recipes} </p>
-                                //             <p className="my-2 flex items-center gap-1"><BiLike className='text-xl text-red-500' /> <span className="">{chef.likes}</span></p>
-                                //             <button className="py-2 px-5 rounded bgc-primary">Details</button>
-                                //         </div>
-                                //     </div>
-                                // </div>
+
 
                                 <div key={chef.id} className="p-4 lg:w-1/2">
                                     <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
@@ -40,7 +30,7 @@ const Chefs = ({ chefs }) => {
                                                 <p className="flex items-center gap-1"><BiLike className='text-xl text-red-500' /> <span className="">{chef.likes}</span></p>
                                             </div>
                                             <span className="inline-flex">
-                                                <button className="py-2 px-5 rounded bgc-primary">Details</button>
+                                                <Link to={`/recipes/${chef.id}`} className="py-2 px-5 rounded bgc-primary">View Recipes</Link>
                                             </span>
                                         </div>
                                     </div>
