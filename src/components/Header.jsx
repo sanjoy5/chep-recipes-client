@@ -18,8 +18,10 @@ const Header = () => {
                         <ActiveLinks to='/blogs' >Blogs</ActiveLinks>
                         <ActiveLinks to='/contact' >Contact</ActiveLinks>
                     </nav>
-                    <button className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
-                    </button>
+                    <Link to='/login' className="inline-flex items-center bgc-primary border-0 py-2 px-6 mr-5 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
+                    </Link>
+                    <Link to='/register' className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Register
+                    </Link>
                 </div>
             </header>
         </>

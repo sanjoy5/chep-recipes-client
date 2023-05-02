@@ -10,6 +10,8 @@ import Chefs from '../components/Chefs';
 import ChefsforRoute from '../pages/ChefsforRoute';
 import ErrorPage from '../pages/ErrorPage';
 import Contact from '../components/Contact';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 const router = createBrowserRouter([
     {
@@ -39,6 +41,16 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>,
+
+            },
+            {
+                path: "/login",
+                element: <Login></Login>,
+
+            },
+            {
+                path: "/register",
+                element: <Register></Register>,
 
             },
             {
