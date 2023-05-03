@@ -5,7 +5,7 @@ const ChefBanner = ({ chef }) => {
     const { chef_name, chef_picture, bio, likes, years_of_experience, numbers_of_recipes } = chef;
 
     return (
-        <div className='w-100 md:w-10/12 mx-auto mb-24 px-5'>
+        <div className='w-100 md:w-10/12 mx-auto mb-24'>
             <div className="h-full w-full grid grid-cols-1 pt-10 items-center md:grid-cols-2 gap-10 px-4 md:px-10 chefbanner">
                 <div className="max-w-[250px] w-100 mx-auto order-3 md:order-2">
                     <img src={chef_picture} alt="" className="object-cover object-center rounded w-full" />

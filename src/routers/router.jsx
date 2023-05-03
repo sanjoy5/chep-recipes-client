@@ -12,6 +12,7 @@ import ErrorPage from '../pages/ErrorPage';
 import Contact from '../components/Contact';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/recipes/:chef_id",
-                element: <ViewRecipes></ViewRecipes>,
+                element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://127.0.0.1:5000/chefs/${params.chef_id}`)
             },
             {

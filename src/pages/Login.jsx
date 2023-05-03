@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
 
-    const { signInByEmailPassword } = useAuthContext()
+    const { signInByEmailPassword, signInWithGoogle, signInWithGithub } = useAuthContext()
     const [error, setError] = useState('')
     const navigate = useNavigate()
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+
+
+    // Handle SignUp Using Email password
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -19,7 +25,7 @@ const Login = () => {
                 .then(result => {
                     const loggedUser = result.user
                     console.log(loggedUser);
-                    navigate('/')
+                    navigate(from, { replace: true });
                 })
                 .catch(error => {
                     setError(error.message)
@@ -31,6 +37,36 @@ const Login = () => {
 
     }
 
+    // Handle SignUp Using Google Loging
+
+    const handleGoogleSignin = () => {
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                // console.log(loggedUser);
+                setError("")
+                navigate('/')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
+
+
+    // Handle SignUp Using Github Loging
+
+    const handleGithubSignin = () => {
+        signInWithGithub()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setError("")
+                navigate('/')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
 
     return (
         <>
@@ -58,10 +94,11 @@ const Login = () => {
 
                 <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg px-9 flex flex-col md:mx-auto w-full mt-10">
                     <div className="">
-                        <div className="flex text-xl text-white font-semibold items-center gap-10 bg-[#4081EC] border-2 rounded border-[#4081EC] mb-4">
+                        <div onClick={handleGoogleSignin} className=" cursor-pointer flex text-xl text-white font-semibold items-center gap-10 bg-[#4081EC] border-2 rounded border-[#4081EC] mb-4">
                             <img className='rounded' src="https://i.ibb.co/Fqf7btx/goole1.webp" height={50} width={50} alt="" /> <p className="">Login with Google</p>
                         </div>
-                        <div className="flex text-xl text-white font-semibold items-center gap-10 bg-[#1B1F23] border-2 rounded border-[#1B1F23]">
+
+                        <div onClick={handleGithubSignin} className="cursor-pointer flex text-xl text-white font-semibold items-center gap-10 bg-[#1B1F23] border-2 rounded border-[#1B1F23]">
                             <img className='rounded' src="https://i.ibb.co/tDPynx6/Git-Hub-Mark.png" height={50} width={50} alt="" /> <p className="">Login with Github</p>
                         </div>
                     </div>

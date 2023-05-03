@@ -13,7 +13,7 @@ const Recipes = ({ chef }) => {
     return (
         <>
             <section className="text-gray-600 body-font">
-                <div className="w-100 md:w-10/12 px-5  pb-20 mx-auto">
+                <div className="w-100 md:w-10/12 pb-20 mx-auto">
                     <div className="flex flex-col">
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
                             <div className="w-24 h-full bg-red-500"></div>
