@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ActiveLinks from './ActiveLinks'
 import { useAuthContext } from '../Provider/AuthProvider'
-import ReactHover from 'react-hover';
 
 const Header = () => {
 
@@ -34,28 +33,28 @@ const Header = () => {
                         <ActiveLinks to='/blogs' >Blogs</ActiveLinks>
                         <ActiveLinks to='/contact' >Contact</ActiveLinks>
                         {
-                            loading ? ''
-                                : user ?
-                                    <>
-                                        <Link to='' className='flex items-center gap-2 relative'>
+                            user ?
+                                <>
+                                    <Link to='' className='flex items-center gap-2 relative'>
 
 
-                                            <div className="tooltip tooltip-bottom" data-tip={`Welcome... ${user?.displayName}`}>
-                                                <img src={user?.photoURL} className='h-12 w-12 rounded-full object-cover object-top' alt="" />
-                                            </div>
+                                        <div className="tooltip tooltip-bottom" data-tip={`Welcome... ${user?.displayName}`}>
+                                            <img src={user?.photoURL} className='h-12 w-12 rounded-full object-cover object-top' alt="" />
+                                        </div>
 
 
-                                            <button onClick={handleLogOut} className="inline-flex items-center bgc-primary border-0 py-2 px-6 ml-4 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Logout
-                                            </button>
-                                        </Link>
+                                        <button onClick={handleLogOut} className="inline-flex items-center bgc-primary border-0 py-2 px-6 ml-4 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Logout
+                                        </button>
+                                    </Link>
 
-                                    </>
-                                    : <>
-                                        <Link to='/login' className="inline-flex items-center bgc-primary border-0 py-2 px-6 mr-5 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
-                                        </Link>
-                                        <Link to='/register' className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Register
-                                        </Link>
-                                    </>
+                                </>
+                                : <>
+
+                                    <Link to='/login' className="inline-flex items-center bgc-primary border-0 py-2 px-6 mr-5 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
+                                    </Link>
+                                    <Link to='/register' className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Register
+                                    </Link>
+                                </>
                         }
 
                     </nav>
