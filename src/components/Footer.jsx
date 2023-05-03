@@ -15,7 +15,7 @@ const Footer = () => {
         //     </div>
         // </footer>
 
-        <footer className="bg-gray-900 text-white mt-8 md:mt-24">
+        <footer className="bg-gray-900 text-white mt-8 md:mt-24 px-4">
 
             <div className="w-100 md:w-10/12 pt-20 pb-14 px-3 mx-auto">
 
