@@ -26,6 +26,8 @@ const Header = () => {
                         <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" className='w-44' alt="" />
                     </Link>
 
+                    {/* For Mobile Device  */}
+
                     <div className="flex justify-between items-center px-4">
                         <Link to='/' className='md:hidden'>
                             <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" className='w-40' alt="" />
@@ -41,7 +43,7 @@ const Header = () => {
                             </div>
                             {
                                 user && <div title={`${user?.displayName}`} className="md:hidden" data-tip={`Welcome... ${user?.displayName}`}>
-                                    <Link to=""> <img src={user?.photoURL} className='h-10 w-10 rounded-full object-cover object-top' alt="" /></Link>
+                                    <Link to="/profile"> <img src={user?.photoURL} className='h-10 w-10 rounded-full object-cover object-top' alt="" /></Link>
                                 </div>
                             }
 
@@ -78,6 +80,7 @@ const Header = () => {
                     }
 
 
+                    {/* For Large Device  */}
 
                     <nav className="ml-auto flex-wrap flex-col md:flex-row hidden md:flex items-center text-base justify-center">
                         <ActiveLinks to='/' >Home</ActiveLinks>
@@ -92,7 +95,7 @@ const Header = () => {
 
 
                                         <div className="tooltip tooltip-bottom hidden md:block" data-tip={`Welcome... ${user?.displayName}`}>
-                                            <Link to=""> <img src={user?.photoURL} className='h-12 w-12 rounded-full object-cover object-top' alt="" /></Link>
+                                            <Link to="/profile"> <img src={user?.photoURL} className='h-12 w-12 rounded-full object-cover object-top' alt="" /></Link>
                                         </div>
 
 

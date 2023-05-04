@@ -41,7 +41,7 @@ const Contact = () => {
 
 
             <section className="text-gray-600 body-font relative">
-                <div className="text-center mt-24 mb-16">
+                <div className="text-center mt-14 md:mt-20 mb-16">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Get In Touch</h1>
                     <div className="flex mt-6 justify-center">
                         <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>

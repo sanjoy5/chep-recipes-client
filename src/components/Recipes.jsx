@@ -15,7 +15,7 @@ const Recipes = ({ chef }) => {
         <>
             <LazyLoad height='100%'>
                 <section className="text-gray-600 body-font">
-                    <div className="w-100 md:w-10/12 pb-20 mx-auto">
+                    <div className="w-100 md:w-10/12 pb-20 mx-auto px-5">
                         <div className="flex flex-col">
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
                                 <div className="w-24 h-full bg-red-500"></div>
@@ -41,7 +41,7 @@ const Recipes = ({ chef }) => {
                                                 <h2 className="text-2xl font-medium title-font text-gray-900 mt-5">{recipe_name}</h2>
 
                                                 <div className="flex justify-between items-center">
-                                                    <div className="my-2 flex items-center gap-2">
+                                                    <div className="my-5 flex items-center gap-2">
                                                         <Rating style={{ maxWidth: 120 }} value={rating} readOnly /> <span>({rating})</span>
                                                     </div>
 

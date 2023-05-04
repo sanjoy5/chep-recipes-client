@@ -8,9 +8,10 @@ const Chefs = ({ chefs }) => {
     return (
         <>
             <section className="text-gray-600 body-font">
-                <div className="w-100 md:w-10/12 px-5 py-24 mx-auto">
+                <div className="w-100 md:w-10/12 px-5 py-14 md:pb-20 md:pt-16 mx-auto">
                     <div className="text-center mb-20">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Our Chefs</h1>
+
                         <div className="flex mt-6 justify-center">
                             <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>
                         </div>

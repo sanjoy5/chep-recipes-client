@@ -13,6 +13,8 @@ import Contact from '../components/Contact';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import PrivateRoute from './PrivateRoute';
+import Blog from '../pages/Blog';
+import Profile from '../pages/Profile';
 
 const router = createBrowserRouter([
     {
@@ -42,6 +44,16 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>,
+
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>,
+
+            },
+            {
+                path: "/blogs",
+                element: <Blog></Blog>,
 
             },
             {
