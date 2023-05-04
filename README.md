@@ -15,8 +15,8 @@ This project was created with ReactJS and Express Js.
 
 ## Live Site Link
 
-- [Firebase Live Client Site Link](https://chef-recipe-e3c54.web.app/)
-- [Vercel Live Server Site Link](https://chef-recipe-hunter-server-sanjoy5.vercel.app/)
+- [Firebase Live Client Side Link](https://chef-recipe-e3c54.web.app/)
+- [Vercel Live Server Side Link](https://chef-recipe-hunter-server-sanjoy5.vercel.app/)
 
 ## Installation
 
