@@ -7,7 +7,7 @@ const Profile = () => {
 
     return (
 
-        <>
+        <div className='px-4'>
             {
                 user && <div className="w-100 md:w-1/3 border rounded p-10 mx-auto my-16">
                     <div className="w-full">
@@ -22,7 +22,7 @@ const Profile = () => {
                 </div>
             }
 
-        </>
+        </div>
     )
 }
 

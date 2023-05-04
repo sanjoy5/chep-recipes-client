@@ -24,12 +24,12 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://127.0.0.1:5000/chefs')
+                loader: () => fetch('https://chef-recipe-hunter-server-sanjoy5.vercel.app/chefs')
             },
             {
                 path: "/recipes/:chef_id",
                 element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://127.0.0.1:5000/chefs/${params.chef_id}`)
+                loader: ({ params }) => fetch(`https://chef-recipe-hunter-server-sanjoy5.vercel.app/chefs/${params.chef_id}`)
             },
             {
                 path: "/services",
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             {
                 path: "/chefs",
                 element: <ChefsforRoute></ChefsforRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/chefs')
+                loader: () => fetch('https://chef-recipe-hunter-server-sanjoy5.vercel.app/chefs')
             },
             {
                 path: "/contact",

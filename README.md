@@ -15,8 +15,8 @@ This project was created with ReactJS and Express Js.
 
 ## Live Site Link
 
-- [Netlify Live Website Link](https://fabulous-panda-0b165e.netlify.app/)
-- [Surge Live Website Link](https://light-oven.surge.sh/)
+- [Firebase Live Client Site Link](https://chef-recipe-e3c54.web.app/)
+- [Vercel Live Server Site Link](https://chef-recipe-hunter-server-sanjoy5.vercel.app/)
 
 ## Installation
 
