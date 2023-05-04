@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../Provider/AuthProvider'
 
 const Register = () => {
@@ -7,6 +7,10 @@ const Register = () => {
     const { createUserByEmailPassword, updateUser, signInWithGoogle, signInWithGithub } = useAuthContext();
     const navigate = useNavigate()
     const [error, setError] = useState('')
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+
 
     // Handle Register Using form 
 
@@ -30,7 +34,6 @@ const Register = () => {
             .then(result => {
                 const createdUser = result.user;
                 setError("")
-
                 updateUser(createdUser, name, photo)
                     .then(() => {
                         console.log('user Updated');
@@ -38,10 +41,12 @@ const Register = () => {
                     .catch(error => {
                         setError(error.message)
                     })
-                // console.log('Created User : ', createdUser);
-                navigate('/login')
+
+                navigate('/success')
+
             })
             .catch(error => {
+                setSuccess('')
                 setError(error.message)
             })
 
@@ -56,7 +61,7 @@ const Register = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 setError("")
-                navigate('/')
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)
@@ -71,7 +76,7 @@ const Register = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 setError("")
-                navigate('/')
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)
@@ -83,10 +88,10 @@ const Register = () => {
         <>
             <div className="container px-5 py-10 md:py-20 mx-auto">
                 <form onSubmit={handleRegister} className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0 border">
-                    <h2 className="text-gray-900 text-2xl mb-3 font-medium title-font text-center">Register Here</h2>
+                    <h2 className="text-gray-900 text-2xl mb-4 font-medium title-font text-center">Register Here</h2>
 
                     {
-                        error && <p className="text-base text-red-500 mb-3"> <strong>Error: </strong> {error}</p>
+                        error && <p className="text-base text-red-500 mb-4 py-3 px-5 bg-slate-100"> <strong>Error: </strong> {error}</p>
                     }
 
 

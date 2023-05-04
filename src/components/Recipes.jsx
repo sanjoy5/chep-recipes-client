@@ -8,19 +8,8 @@ const Recipes = ({ chef }) => {
     const [disabledButtonIds, setDisabledButtonIds] = useState([]);
 
     const handleFav = (recipeId) => {
-
-        const previous_id = localStorage.getItem('recipe_id')
-
-        if (previous_id === recipeId) {
-            alert('Allready in favorit')
-            return
-        } else {
-            setDisabledButtonIds([...disabledButtonIds, recipeId]);
-            toast('Added to the Favorite.');
-            console.log('disabledButtonIds : ', disabledButtonIds);
-            localStorage.setItem('recipe_id', [...disabledButtonIds, recipeId])
-        }
-
+        setDisabledButtonIds([...disabledButtonIds, recipeId]);
+        toast('Added to the Favorite.');
     };
     return (
         <>

@@ -15,6 +15,7 @@ import Register from '../pages/Register';
 import PrivateRoute from './PrivateRoute';
 import Blog from '../pages/Blog';
 import Profile from '../pages/Profile';
+import Success from '../pages/Success';
 
 const router = createBrowserRouter([
     {
@@ -66,11 +67,16 @@ const router = createBrowserRouter([
                 element: <Register></Register>,
 
             },
+
             {
                 path: "*",
                 element: <ErrorPage></ErrorPage>
             },
         ],
+    },
+    {
+        path: "/success",
+        element: <PrivateRoute><Success></Success></PrivateRoute>,
     },
 ]);
 

@@ -42,7 +42,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 // console.log(loggedUser);
                 setError("")
-                navigate('/')
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)
@@ -58,7 +58,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 setError("")
-                navigate('/')
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)
@@ -69,10 +69,10 @@ const Login = () => {
         <>
             <div className="container px-5 py-10 md:py-20 mx-auto">
                 <form onSubmit={handleLogin} className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0 border">
-                    <h2 className="text-gray-900 text-2xl mb-3 font-medium title-font text-center">Login Here</h2>
+                    <h2 className="text-gray-900 text-2xl mb-4 font-medium title-font text-center">Login Here</h2>
 
                     {
-                        error && <p className="text-base text-red-500 mb-3"> <strong>Error: </strong> {error}</p>
+                        error && <p className="text-base text-red-500 mb-4 py-3 px-5 bg-slate-100"> <strong>Error: </strong> {error}</p>
                     }
 
                     <div className="relative mb-4">
