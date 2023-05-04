@@ -20,20 +20,17 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        if (email, password) {
-            signInByEmailPassword(email, password)
-                .then(result => {
-                    const loggedUser = result.user
-                    console.log(loggedUser);
-                    navigate(from, { replace: true });
-                })
-                .catch(error => {
-                    setError(error.message)
-                })
-        } else {
-            setError('You cannot submit empty email and password fields')
-            return
-        }
+
+        signInByEmailPassword(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser);
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+
 
     }
 
@@ -80,11 +77,11 @@ const Login = () => {
 
                     <div className="relative mb-4">
                         <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                        <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                        <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
-                        <input type="password" id="password" name="password" className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                        <input type="password" id="password" name="password" className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
                     </div>
 
                     <button type='submit' className="mt-2 text-white bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-lg">Login</button>

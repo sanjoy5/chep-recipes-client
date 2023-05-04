@@ -1,9 +1,16 @@
 import React from 'react'
+import { RotatingLines } from 'react-loader-spinner'
 
 const Loading = () => {
     return (
         <div className='h-96 w-full flex items-center justify-center'>
-            <h2 className="color-primary text-2xl md:text-4xl font-bold">Loading...</h2>
+            <RotatingLines
+                strokeColor="grey"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="96"
+                visible={true}
+            />
         </div>
     )
 }

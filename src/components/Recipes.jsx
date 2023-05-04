@@ -8,8 +8,19 @@ const Recipes = ({ chef }) => {
     const [disabledButtonIds, setDisabledButtonIds] = useState([]);
 
     const handleFav = (recipeId) => {
-        setDisabledButtonIds([...disabledButtonIds, recipeId]);
-        toast('Added to the Favorite.');
+
+        const previous_id = localStorage.getItem('recipe_id')
+
+        if (previous_id === recipeId) {
+            alert('Allready in favorit')
+            return
+        } else {
+            setDisabledButtonIds([...disabledButtonIds, recipeId]);
+            toast('Added to the Favorite.');
+            console.log('disabledButtonIds : ', disabledButtonIds);
+            localStorage.setItem('recipe_id', [...disabledButtonIds, recipeId])
+        }
+
     };
     return (
         <>
@@ -33,38 +44,38 @@ const Recipes = ({ chef }) => {
                                     const { resipe_id, recipe_name, recipe_image, ingredients, cooking_method, rating } = items;
                                     const isDisabled = disabledButtonIds.includes(resipe_id);
                                     return (
-                                        <>
-                                            <div key={resipe_id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                                                <div className="rounded-lg h-64 overflow-hidden">
-                                                    <img alt="content" className="object-cover object-center h-full w-full" src={recipe_image} />
-                                                </div>
-                                                <h2 className="text-2xl font-medium title-font text-gray-900 mt-5">{recipe_name}</h2>
 
-                                                <div className="flex justify-between items-center">
-                                                    <div className="my-5 flex items-center gap-2">
-                                                        <Rating style={{ maxWidth: 120 }} value={rating} readOnly /> <span>({rating})</span>
-                                                    </div>
+                                        <div key={resipe_id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                                            <div className="rounded-lg h-64 overflow-hidden">
+                                                <img alt="content" className="object-cover object-center h-full w-full" src={recipe_image} />
+                                            </div>
+                                            <h2 className="text-2xl font-medium title-font text-gray-900 mt-5">{recipe_name}</h2>
 
-                                                    <button onClick={() => handleFav(resipe_id)} disabled={isDisabled} className={`${isDisabled ? 'bg-red-300' : 'bg-red-500'} px-5 py-2 text-white`}>
-                                                        {isDisabled ? 'Favorited' : 'Favorite'}
-                                                    </button>
-
-
+                                            <div className="flex justify-between items-center">
+                                                <div className="my-5 flex items-center gap-2">
+                                                    <Rating style={{ maxWidth: 120 }} value={rating} readOnly /> <span>({rating})</span>
                                                 </div>
 
-                                                <div className="text-base leading-relaxed mt-2">
-                                                    <p className="text-lg text-dark font-semibold">Cooking Method: </p>
-                                                    <p className="">{cooking_method}</p>
-                                                </div>
+                                                <button onClick={() => handleFav(resipe_id)} disabled={isDisabled} className={`${isDisabled ? 'bg-red-300' : 'bg-red-500'} px-5 py-2 text-white`}>
+                                                    {isDisabled ? 'Favorited' : 'Favorite'}
+                                                </button>
 
-                                                <div className="text-base leading-relaxed mt-2"><p className="text-lg text-dark font-semibold">Ingredients: </p>
-                                                    {ingredients.map(item => (
-                                                        <p className="">{item}</p>
-                                                    ))}</div>
 
                                             </div>
 
-                                        </>
+                                            <div className="text-base leading-relaxed mt-2">
+                                                <p className="text-lg text-dark font-semibold">Cooking Method: </p>
+                                                <p className="">{cooking_method}</p>
+                                            </div>
+
+                                            <div className="text-base leading-relaxed mt-2"><p className="text-lg text-dark font-semibold">Ingredients: </p>
+                                                {ingredients.map(item => (
+                                                    <p className="">{item}</p>
+                                                ))}</div>
+
+                                        </div>
+
+
                                     )
                                 })
                             }

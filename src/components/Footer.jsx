@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="w-100 md:w-10/12 pt-20 pb-14 px-3 mx-auto">
 
                 <div className="flex justify-between flex-col md:flex-row pb-12 md:pb-20">
-                    <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" className="w-40 md:w-48 h-full mb-5 md:mb-0 cursor-pointer bg-white rounded-md" alt="" />
+                    <img src="https://i.ibb.co/PQKN3hf/Logo-Makr-8t-Ngaw-1.png" className="w-40 md:w-48 h-full mb-5 md:mb-0 cursor-pointer rounded-md" alt="" />
                     <div className="flex items-center flex-wrap gap-5 md:gap-10">
                         <p className="text-xl">Ready to get strated?</p>
                         <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Get Started</button>

@@ -23,14 +23,14 @@ const Header = () => {
             <header className="text-gray-600 body-font">
                 <div className="w-100 md:w-10/12 mx-auto flex flex-wrap py-5 flex-col md:flex-row  md:items-center relative">
                     <Link to='/' className='mr-auto hidden md:block'>
-                        <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" className='w-44' alt="" />
+                        <img src="https://i.ibb.co/RSFx0Mv/Logo-Makr-8t-Ngaw.png" className='w-44' alt="" />
                     </Link>
 
                     {/* For Mobile Device  */}
 
                     <div className="flex justify-between items-center px-4">
                         <Link to='/' className='md:hidden'>
-                            <img src="https://i.ibb.co/YP2Nq3Q/Logo-Makr-7u04-SC.png" className='w-40' alt="" />
+                            <img src="https://i.ibb.co/RSFx0Mv/Logo-Makr-8t-Ngaw.png" className='w-40' alt="" />
                         </Link>
 
                         <div className='flex items-center gap-4'>
@@ -92,20 +92,14 @@ const Header = () => {
                             user ?
                                 <>
                                     <div className='flex items-center gap-2 relative'>
-
-
                                         <div className="tooltip tooltip-bottom hidden md:block" data-tip={`Welcome... ${user?.displayName}`}>
                                             <Link to="/profile"> <img src={user?.photoURL} className='h-12 w-12 rounded-full object-cover object-top' alt="" /></Link>
                                         </div>
-
-
                                         <button onClick={handleLogOut} className="inline-flex items-center bgc-primary border-0 py-2 px-6 md:ml-4 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Logout
                                         </button>
                                     </div>
-
                                 </>
                                 : <>
-
                                     <Link to='/login' className="inline-flex items-center bgc-primary border-0 py-2 px-6 mr-5 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Login
                                     </Link>
                                     <Link to='/register' className="inline-flex items-center bgc-primary border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-xl text-white mt-4 md:mt-0">Register

@@ -7,7 +7,7 @@ const ViewRecipes = () => {
 
     const singleChefRecipes = useLoaderData()
     const chef = singleChefRecipes[0]
-    console.log('Single Chef Recipes : ', chef);
+    // console.log('Single Chef Recipes : ', chef);
 
     return (
         <div>

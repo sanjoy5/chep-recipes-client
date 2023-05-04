@@ -38,7 +38,7 @@ const Register = () => {
                     .catch(error => {
                         setError(error.message)
                     })
-                console.log('Created User : ', createdUser);
+                // console.log('Created User : ', createdUser);
                 navigate('/login')
             })
             .catch(error => {
